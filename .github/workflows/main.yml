@@ -50,6 +50,7 @@ jobs:
          context: ./simple-api
          # Note: tags has to be all lower-case
          tags:  lilywhale/takimalabs:backend
+         push: ${{ github.ref == 'refs/heads/main' }}
   
      - name: Build image and push database
        uses: docker/build-push-action@v3
@@ -58,6 +59,7 @@ jobs:
          context: ./database
          # Note: tags has to be all lower-case
          tags:  lilywhale/takimalabs:database
+         push: ${{ github.ref == 'refs/heads/main' }}
   
      - name: Build image and push httpd
        uses: docker/build-push-action@v3
@@ -66,3 +68,4 @@ jobs:
          context: ./http-server
          # Note: tags has to be all lower-case
          tags: lilywhale/takimalabs:http_server
+         push: ${{ github.ref == 'refs/heads/main' }}
