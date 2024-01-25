@@ -1,0 +1,6 @@
+- name: Create Docker Network
+  docker_network:
+    name: your_network_name
+    state: present
+
+# tasks file for roles/network

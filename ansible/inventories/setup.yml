@@ -1,7 +1,7 @@
 all:
  vars:
-   ansible_user: centos
-   ansible_ssh_private_key_file: /path/to/private/key
+   ansible_user: ubuntu
+   ansible_ssh_private_key_file: /home/camille/camille-key.pem
  children:
    prod:
-     hosts: hostname or IP
+     hosts: ec2-52-47-183-3.eu-west-3.compute.amazonaws.com

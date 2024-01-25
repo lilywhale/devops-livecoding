@@ -1,0 +1,9 @@
+- name: Run Database Container
+  docker_container:
+    name: your_database_container
+    image: your_database_image:tag
+    state: started
+    networks:
+      - name: your_network_name
+
+# tasks file for roles/database

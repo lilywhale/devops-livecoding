@@ -1,0 +1,11 @@
+- name: Run the main application container
+  docker_container:
+    name: your_app_container
+    image: your_app_image:tag
+    state: started
+    ports:
+      - "your_host_port:container_port"
+    networks:
+      - name: your_network_name
+
+# tasks file for roles/app

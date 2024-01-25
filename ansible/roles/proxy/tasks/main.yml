@@ -1,0 +1,11 @@
+- name: Run Proxy Container
+  docker_container:
+    name: your_proxy_container
+    image: your_proxy_image:tag
+    state: started
+    ports:
+      - "your_proxy_port:container_port"
+    networks:
+      - name: your_network_name
+
+# tasks file for roles/proxy
