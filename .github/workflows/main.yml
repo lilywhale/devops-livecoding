@@ -49,7 +49,7 @@ jobs:
          # relative path to the place where source code with Dockerfile is located
          context: ./simple-api
          # Note: tags has to be all lower-case
-         tags:  ${{secrets.DOCKERHUB_USERNAME}}/takimalabs:backend
+         tags:  lilywhale/takimalabs:backend
   
      - name: Build image and push database
        uses: docker/build-push-action@v3
@@ -57,7 +57,7 @@ jobs:
          # relative path to the place where source code with Dockerfile is located
          context: ./database
          # Note: tags has to be all lower-case
-         tags:  ${{secrets.DOCKERHUB_USERNAME}}/takimalabs:database
+         tags:  lilywhale/takimalabs:database
   
      - name: Build image and push httpd
        uses: docker/build-push-action@v3
@@ -65,4 +65,4 @@ jobs:
          # relative path to the place where source code with Dockerfile is located
          context: ./http-server
          # Note: tags has to be all lower-case
-         tags:  ${{secrets.DOCKERHUB_USERNAME}}/takimalabs:http_server
+         tags: lilywhale/takimalabs:http_server
