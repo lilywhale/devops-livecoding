@@ -1,11 +1,8 @@
-- name: Run Proxy Container
+- name: Run Proxy HTTPD
   docker_container:
-    name: your_proxy_container
-    image: your_proxy_image:tag
-    state: started
-    ports:
-      - "your_proxy_port:container_port"
+    name: proxy
+    image: lilywhale/takimalabs:http_server
+    recreate: true
     networks:
-      - name: your_network_name
-
+      - name: takima_lab_app_network
 # tasks file for roles/proxy

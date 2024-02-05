@@ -1,9 +1,9 @@
 - name: Run Database Container
   docker_container:
-    name: your_database_container
+    name: database
     image: your_database_image:tag
-    state: started
+    image: lilywhale/takimalabs:database
+    recreate: true
     networks:
-      - name: your_network_name
-
+      - name: takima_lab_app_network
 # tasks file for roles/database

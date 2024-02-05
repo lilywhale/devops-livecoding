@@ -1,6 +1,6 @@
 - name: Create Docker Network
-  docker_network:
-    name: your_network_name
+  community.general.docker_network:
+    name: takima_lab_app_network
     state: present
 
 # tasks file for roles/network
